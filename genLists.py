@@ -1,10 +1,12 @@
 import random
 
+# Initial wordlists
 fours = []
 fives = []
 sixes = []
 sevens = []
 
+# Fill above lists with corresponding word lengths from wordlist
 with open('wordlist.txt') as wordlist:
     for line in wordlist:
         if len(line.strip()) == 4:
@@ -16,11 +18,7 @@ with open('wordlist.txt') as wordlist:
         elif len(line.strip()) == 7:
             sevens.append(line.strip())
 
-# print(len(fours))
-# print(len(fives))
-# print(len(sixes))
-# print(len(sevens))
-
+# Create new lists and fill with number of items in fours
 fivesLess = []
 sixesLess = []
 sevensLess = []
@@ -48,6 +46,7 @@ while sevensCounter < len(fours):
 
 choices = [fours, fivesLess, sixesLess, sevensLess]
 
+# Generate n number of seeds and print
 seedCounter = 0
 while seedCounter < 1:
     seed = []
