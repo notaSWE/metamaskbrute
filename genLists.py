@@ -9,13 +9,13 @@ sevens = []
 # Fill above lists with corresponding word lengths from wordlist
 with open('wordlist.txt') as wordlist:
     for line in wordlist:
-        if len(line.strip()) == 4:
+        if len(line) == 4:
             fours.append(line.strip())
-        elif len(line.strip()) == 5:
+        elif len(line) == 5:
             fives.append(line.strip())
-        elif len(line.strip()) == 6:
+        elif len(line) == 6:
             sixes.append(line.strip())
-        elif len(line.strip()) == 7:
+        elif len(line) == 7:
             sevens.append(line.strip())
 
 # Create new lists and fill with number of items in fours
@@ -56,4 +56,4 @@ while seedCounter < 1:
         seed.append(wordChoice)
     seedCounter += 1
 
-    print(seed)
+    print(' '.join(seed))
